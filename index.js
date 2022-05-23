@@ -3,4 +3,8 @@ function greet(username) {
     alert("Hello, " + username + ".");
     var userAge = prompt("How old are you?");
     var userAge = parseInt(userAge);
+
+    var year = new Date().getFullYear();
+    window.confirm("Have you had a birthday yet this year?");
+
 }
