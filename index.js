@@ -6,5 +6,9 @@ function greet(username) {
 
     var year = new Date().getFullYear();
     window.confirm("Have you had a birthday yet this year?");
-
+    if (window.confirm == true) {
+        alert(year - userAge);
+    }  else  {
+        alert(year - (userAge + 1));  
+    }
 }
