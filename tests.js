@@ -175,13 +175,13 @@ function runTests() {
       })
       it("should alert user's birth year if user's birthday has passed this year", () => {
         runBtn.click()
-        expect(alertStub.secondCall.args[0].includes(new Date().getFullYear() - userAge)).to.be.true
+        expect(String(alertStub.secondCall.args[0]).includes(new Date().getFullYear() - userAge)).to.be.true
       })
       it("should alert user's birth year if user's birthday has NOT yet passed this year", () => {
         confirmStub.restore()
         sinon.stub(window, 'confirm').returns(false)
         runBtn.click()
-        expect(alertStub.secondCall.args[0].includes(new Date().getFullYear() - userAge - 1)).to.be.true
+        expect(String(alertStub.secondCall.args[0]).includes(new Date().getFullYear() - userAge - 1)).to.be.true
       })
     })
   });
